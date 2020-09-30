@@ -12,27 +12,21 @@ body {
     font-size: 1rem;
     line-height: 1.5;
 }
-
-div {
-    display: block; 
-    margin: 0;
-    padding: 0;
-}
-
-
 /* Для HEADER */
 .container-header{
     display: flex; 
-	justify-content: space-between;
+	  justify-content: flex-end;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
     background-image: url('../img/apple.png');
     background-size: 50px 50px;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #282828;
-    height: 15vh;    
+    width: 100vw;
+    height: 15vh;   
+    
 }
 
 .navig {
@@ -43,25 +37,47 @@ div {
 /* Для DIV Iphone*/
 
 .back-iphone {
-    width: 100vw;
-    height: 85vh;
-    background-image: url('../img/iphone.png');
-    background-position: 0% 35%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply	;     
+  width: 100vw;
+  height: 85vh;
+  background-image: url('../img/iphone.png');
+  background-position: 0% 35%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply	;     
+}
+
+.basket {
+  outline: none;
+  border: 2px solid #282828;
+  padding: 20px 40px;
+  margin: 35px 50px;
+  background-color: #fff;
+  color: #171717;
+  border-radius: 30px;   
+  cursor: pointer;
+  font-size: 30px;
+  background-image: url('../img/backet-black.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.basket:hover {
+  background-image: url('../img/backet-white.png');
+  color: #fff;
+  background-color: #282828;
+  border-color: #fff;
 }
 
 .buy-now {
-    outline: none;
-    border: 2px solid #282828;
-    padding: 15px 40px;
-    margin: 35vh 100px;
-    background-color: #fff;
-    color: #171717;
-    border-radius: 30px;   
-    cursor: pointer;
-    font-size: 30px;
+  outline: none;
+  border: 2px solid #282828;
+  padding: 15px 40px;
+  margin: 35vh 100px;
+  background-color: #fff;
+  color: #171717;
+  border-radius: 30px;   
+  cursor: pointer;
+  font-size: 30px;
   }
 
 .buy-now:hover {
@@ -141,13 +157,16 @@ div {
 .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
     left: -300%;
 }
+.slider__nav:checked:nth-of-type(5) ~ .slider__inner {
+  left: -400%;
+}
 
 
 .slider__inner {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;
+  width: 500%; /* Увеличивать при увеличении слайдеров*/
   height: 100%;
   -webkit-transition: left 0.4s;
   transition: left 1.0s;
@@ -165,9 +184,6 @@ div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  background-image: url('');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   display: flex;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -184,6 +200,12 @@ div {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.back-iphone-shop {
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 .slider__image {
   font-size: 2.7rem;
